@@ -365,7 +365,7 @@ function Merge-XmlTv {
             Show-Spinner -Activity "Merging"
         }
         catch {
-            Write-Log "[Merge] Failed to parse/merge $file: $($_.Exception.Message)" 'ERROR'
+            Write-Log "[Merge] Failed to parse/merge $file: ${($_.Exception.Message)}" 'ERROR'
             continue
         }
     }
@@ -376,7 +376,7 @@ function Merge-XmlTv {
         Write-Log "[Merge] Complete: Channels=$totalChannels (+$dupChannels dup), Programmes=$totalProgrammes (+$dupProgrammes dup)" 'INFO'
     }
     catch {
-        Write-Log "[Merge] Failed to write output: $($_.Exception.Message)" 'ERROR'
+        Write-Log "[Merge] Failed to write output: ${($_.Exception.Message)}" 'ERROR'
         throw
     }
 
@@ -424,7 +424,7 @@ function Validate-XmlTv {
         Write-Log "[QA] Channels=$channelCount; Programmes=$programmeCount" 'INFO'
     }
     catch {
-        $issues += "Cannot parse XML: $($_.Exception.Message)"
+        $issues += "Cannot parse XML: ${($_.Exception.Message)}"
     }
 
     foreach ($i in $issues) { Write-Log "[QA] Issue: $i" 'WARN' }
@@ -507,7 +507,7 @@ function Run-Pipeline {
         }
     }
     catch {
-        Write-Log "[Fatal] Unhandled error: $($_.Exception.Message)" 'ERROR'
+        Write-Log "[Fatal] Unhandled error: ${($_.Exception.Message)}" 'ERROR'
     }
     finally {
         Write-Log "===== END Open-EPG Merge Run =====" 'INFO'
