@@ -3,8 +3,8 @@ param(
     [string]$ExcludeFile = "configs/exclude_channels.txt"
 )
 
-$ProjectRoot = "C:\Users\Lenovo\PROJECTS\get-epg-open-epg.com\get-epg-open-epg.com"
-$OutputDir   = Join-Path $ProjectRoot "data\output"
+$ProjectRoot = (Get-Location).Path
+$OutputDir   = Join-Path $ProjectRoot "data/output"
 $LogsDir     = Join-Path $ProjectRoot "logs"
 $LogFile     = Join-Path $LogsDir "open-epg.log.txt"
 
@@ -18,14 +18,16 @@ function Write-Log {
     Write-Host $line
 }
 
-# Load exclusions
+# Load exclusions (ignore blank lines and comments)
 $Exclusions = @()
 if (Test-Path $ExcludeFile) {
-    $Exclusions = Get-Content $ExcludeFile | Where-Object { $_ -and $_ -notmatch '^\s*$' }
+    $Exclusions = Get-Content $ExcludeFile |
+        Where-Object { $_ -and $_ -notmatch '^\s*$' -and $_ -notmatch '^\s*#' } |
+        ForEach-Object { $_.Trim() }
     Write-Log "Loaded exclusions: $($Exclusions.Count)" 'INFO'
 }
 
-# Country sources
+# Country sources (per-country merge only)
 $CountrySources = @{
     "AU" = @(
         "https://www.open-epg.com/files/australia1.xml.gz",
@@ -75,7 +77,8 @@ function Get-CountryEPG {
             Write-Log "Downloading $url" 'INFO'
             $resp = Invoke-WebRequest -Uri $url -UseBasicParsing -ErrorAction Stop
             $bytes = $resp.Content
-            # decompress if gz
+
+            # Decompress .gz into XML text
             if ($url.EndsWith(".gz")) {
                 $ms = New-Object System.IO.MemoryStream
                 $ms.Write($bytes,0,$bytes.Length)

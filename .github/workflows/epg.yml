@@ -2,8 +2,8 @@ name: Fetch and Merge EPG
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # run every 6 hours
-  workflow_dispatch:        # allow manual trigger
+    - cron: "0 */6 * * *"   # every 6 hours
+  workflow_dispatch:        # manual trigger
 
 jobs:
   build:
@@ -11,18 +11,36 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # ensure we can push back
 
-      - name: Setup PowerShell
-        uses: actions/setup-powershell@v2
+      - name: Ensure output/logs/configs folders exist
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "data/output" | Out-Null
+          New-Item -ItemType Directory -Force -Path "logs" | Out-Null
+          New-Item -ItemType Directory -Force -Path "configs" | Out-Null
+          if (-not (Test-Path "configs/exclude_channels.txt")) {
+            '# Exclude channel IDs (one per line)' | Out-File -FilePath "configs/exclude_channels.txt" -Encoding UTF8
+          }
 
-      - name: Run EPG Fetch + Merge
+      - name: Run EPG fetch + per-country merge
+        shell: pwsh
         run: pwsh ./scripts/Get-EPG-Countries.ps1 -ExcludeFile ./configs/exclude_channels.txt
 
-      - name: Commit and Push updated EPG files
+      - name: Commit and push updated EPG files
+        shell: pwsh
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/output/*.xml logs/open-epg.log.txt
-          git commit -m "Update per-country EPG files"
-          git push
+
+          git add data/output/*.xml logs/open-epg.log.txt configs/exclude_channels.txt
+
+          # Only commit if there are changes
+          if ((git status --porcelain).Length -gt 0) {
+            git commit -m "Update per-country EPG files"
+            git push
+          } else {
+            Write-Host "No changes to commit."
+          }

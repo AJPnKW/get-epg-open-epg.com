@@ -5,14 +5,14 @@ param(
 
 $null = New-Item -ItemType Directory -Force -Path (Split-Path $OutputFile)
 
-# Network list
+# Network list (keyword match)
 $Networks = @(
     "A+E Networks","ABC","ABC - AU","BBC","CBC","CBS","Citytv","Crave","CTV","CTV 2","CW",
     "Food Network","FOX","Global","HBO","ION","ITV","NBC","Network","Network 10","OMNI",
     "PBS","Pluto TV","SBS","The CW","TVOntario","Warner","Discovery"
 )
 
-# Type keywords
+# Type keywords (keyword match)
 $Types = @("business","comedy","cooking","culture","documentary","entertainment",
            "general","lifestyle","movies","music","news","science","series")
 
@@ -25,12 +25,8 @@ foreach ($file in Get-ChildItem $InputDir -Filter "open-epg-*.xml") {
         $network = "Unknown"
         $type    = "Unknown"
 
-        foreach ($n in $Networks) {
-            if ($name -like "*$n*") { $network = $n; break }
-        }
-        foreach ($t in $Types) {
-            if ($name -like "*$t*") { $type = $t; break }
-        }
+        foreach ($n in $Networks) { if ($name -like "*$n*") { $network = $n; break } }
+        foreach ($t in $Types)    { if ($name -like "*$t*") { $type    = $t; break } }
 
         $rows += [pscustomobject]@{
             Country   = $country
