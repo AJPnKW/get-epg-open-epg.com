@@ -47,11 +47,27 @@ Write-Report "`n=== Input File Validation ==="
 $excludeFile = Join-Path $ConfigDir "exclude_channels.txt"
 $excludedChannels = @()
 if (Test-Path $excludeFile) {
-    $excludedChannels = Get-Content $excludeFile | Where-Object { $_ -and $_ -notmatch '^\s*#' }
+    $excludedChannels = Get-Content $excludeFile |
+        Where-Object { $_ -and $_ -notmatch '^\s*#' } |
+        ForEach-Object {
+            $_.Trim().ToLower() `
+              -replace 'u00e9','é' `
+              -replace 'u00e0','à' `
+              -replace 'u00f1','ñ'
+        }
     $exCount = $excludedChannels.Count
     Write-Report "Exclusion file exists with $exCount entries"
 } else {
     Write-Report "Exclusion file MISSING"
+}
+
+function Is-Excluded($channel) {
+    $c = $channel.Trim().ToLower()
+    foreach ($ex in $excludedChannels) {
+        if ($c -eq $ex) { return $true }
+        if ($c -like $ex) { return $true }
+    }
+    return $false
 }
 
 # --- 4. QA each EPG file ---
@@ -80,7 +96,7 @@ foreach ($epg in Get-ChildItem $OutputDir -Filter "open-epg-*.xml" -ErrorAction 
         $progIDs = $doc.tv.programme.channel
 
         # Channels with no programmes (excluding excluded list)
-        $noProg = $chanIDs | Where-Object { $_ -notin $progIDs -and $_ -notin $excludedChannels }
+        $noProg = $chanIDs | Where-Object { $_ -notin $progIDs -and -not (Is-Excluded $_) }
         Write-Report "  Channels with NO programme data: $($noProg.Count)"
         $totalNoProg += $noProg.Count
         if ($noProg.Count -gt 0) {
@@ -88,7 +104,7 @@ foreach ($epg in Get-ChildItem $OutputDir -Filter "open-epg-*.xml" -ErrorAction 
         }
 
         # Programmes with no channel (excluding excluded list)
-        $orphanProg = $progIDs | Where-Object { $_ -notin $chanIDs -and $_ -notin $excludedChannels }
+        $orphanProg = $progIDs | Where-Object { $_ -notin $chanIDs -and -not (Is-Excluded $_) }
         Write-Report "  Programmes with NO matching channel: $($orphanProg.Count)"
         $totalOrphan += $orphanProg.Count
         if ($orphanProg.Count -gt 0) {
@@ -109,7 +125,7 @@ foreach ($epg in Get-ChildItem $OutputDir -Filter "open-epg-*.xml" -ErrorAction 
         # Density & duplicates
         $avgProgPerChannel = if ($channels -gt 0) { [math]::Round($programmes / $channels,2) } else { 0 }
         Write-Report "  Avg programmes per channel: $avgProgPerChannel"
-        $dupChannels = $chanIDs | Group-Object | Where-Object { $_.Count -gt 1 }
+        $dupChannels = $chanIDs | Group-Object | Where-Object { $_.Count -gt 1 -and -not (Is-Excluded $_.Name) }
         Write-Report "  Duplicate channel IDs detected: $($dupChannels.Count)"
         if ($dupChannels) {
             $dupChannels | ForEach-Object { Write-Report "    $($_.Name) appears $($_.Count)x" }
@@ -119,7 +135,7 @@ foreach ($epg in Get-ChildItem $OutputDir -Filter "open-epg-*.xml" -ErrorAction 
         $gapSummary = @{}
         $byChannel = $doc.tv.programme | Group-Object channel
         foreach ($grp in $byChannel) {
-            if ($grp.Name -notin $excludedChannels) {
+            if (-not (Is-Excluded $grp.Name)) {
                 $times = $grp.Group.start | ForEach-Object {
                     try { [datetime]::ParseExact($_.Substring(0,14),"yyyyMMddHHmmss",$null) } catch {}
                 }
