@@ -1,0 +1,22 @@
+[2025-12-03 18:16:12] [INFO] LOG FILE CREATED SUCCESSFULLY
+[2025-12-03 18:16:12] [INFO] Python location: C:\Program Files\Python314\python3.14t.exe
+[2025-12-03 18:16:12] [INFO] Script running from: C:\Users\Lenovo\PROJECTS\get-epg-open-epg.com\get-epg-open-epg.com\scripts
+[2025-12-03 18:16:12] [INFO] Log file confirmed: C:\Users\Lenovo\PROJECTS\get-epg-open-epg.com\get-epg-open-epg.com\logs\get_channels_20251203_181612.log.txt
+[2025-12-03 18:16:12] [INFO] Output folder: C:\Users\Lenovo\PROJECTS\get-epg-open-epg.com\get-epg-open-epg.com\data\output
+[2025-12-03 18:16:14] [INFO] requests module loaded successfully
+[2025-12-03 18:16:14] [INFO] Testing internet...
+[2025-12-03 18:16:15] [INFO] Internet connection OK
+[2025-12-03 18:16:15] [INFO] Launching all 4 sources in parallel (multi-threaded)...
+[2025-12-03 18:16:15] [INFO] Starting → iptv-org JSON
+[2025-12-03 18:16:15] [INFO] Starting → English M3U
+[2025-12-03 18:16:15] [INFO] Starting → Free-TV
+[2025-12-03 18:16:15] [INFO] Starting → Canada M3U
+[2025-12-03 18:16:16] [RESULT] 4_canada_kitchener.csv → 0 channels
+[2025-12-03 18:16:16] [RESULT] 3_free_tv.csv → 119 channels
+[2025-12-03 18:16:16] [RESULT] 1_iptv-org_full.csv → 0 channels
+[2025-12-03 18:16:16] [RESULT] 2_english_m3u.csv → 0 channels
+[2025-12-03 18:16:16] [INFO] ══════════════════════════════════════════════════════════════════════
+[2025-12-03 18:16:16] [INFO] COMPLETED SUCCESSFULLY!
+[2025-12-03 18:16:16] [INFO] CSVs saved to → C:\Users\Lenovo\PROJECTS\get-epg-open-epg.com\get-epg-open-epg.com\data\output
+[2025-12-03 18:16:16] [INFO] Log file      → C:\Users\Lenovo\PROJECTS\get-epg-open-epg.com\get-epg-open-epg.com\logs\get_channels_20251203_181612.log.txt
+[2025-12-03 18:16:16] [INFO] ══════════════════════════════════════════════════════════════════════

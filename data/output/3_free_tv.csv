@@ -1,0 +1,120 @@
+name,country,group_title,url
+ABC,AU,Australia,https://c.mjh.nz/101002210221/
+TVSN,AU,Australia,https://tvsn-i.akamaihd.net/hls/live/261837/tvsn/tvsn_750.m3u8
+ABC Me,AU,Australia,https://c.mjh.nz/101002210224/
+ABC News,AU,Australia,https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8
+M4TV,AU,Australia,https://5a32c05065c79.streamlock.net/live/stream/playlist.m3u8
+Racing.com,AU,Australia,https://racingvic-i.akamaized.net/hls/live/598695/racingvic/1500.m3u8
+9Go! Ⓖ,AU,Australia,https://9now-livestreams.akamaized.net/hls/live/2008312/go-syd/master.m3u8
+9Life Ⓖ,AU,Australia,https://9now-livestreams.akamaized.net/hls/live/2008313/life-syd/master.m3u8
+9Rush Ⓖ,AU,Australia,https://9now-livestreams.akamaized.net/hls/live/2010626/rush-syd/master.m3u8
+CBC Toronto,CA,Canada,https://bozztv.com/teleyupp1/teleup-ydcl2V1MVC/playlist.m3u8
+Citytv,CA,Canada,https://bozztv.com/teleyupp1/teleup-iSykLSKMFr/tracks-v1a1/mono.m3u8
+CTV Toronto,CA,Canada,https://bozztv.com/teleyupp1/teleup-zxsJFt6VvY/playlist.m3u8
+Global Toronto,CA,Canada,https://d128o1k7zh3htz.cloudfront.net/out/v1/74a58360a3734f97b74ba439bc678044/index.m3u8
+Global Calgary,CA,Canada,https://dfmjr9irb1dl5.cloudfront.net/out/v1/454010ff309e4963a087f5802856e346/index.m3u8
+Global Edmonton,CA,Canada,https://da7sdtkzly6qj.cloudfront.net/out/v1/b317f6c10f2e493993bd2b5314df1c7c/index_1.m3u8
+TVO,CA,Canada,https://bozztv.com/teleyupp1/teleup-OMZsmYVUMp/playlist.m3u8
+NTV,CA,Canada,http://152.89.62.111:8080/nXyAiP3DNp/QgOuvocpGv/223012
+CHCH,CA,Canada,http://152.89.62.111:8080/nXyAiP3DNp/QgOuvocpGv/222841
+ONNtv Ontario,CA,Canada,https://onntv.vantrix.tv:443/onntv_hls/1080p/onntv_hls-HLS-1080p.m3u8
+Star TV,CA,Canada,http://live.canadastartv.com:1935/canadastartv/canadastartv/playlist.m3u
+CBC News,CA,Canada,https://cbcnewshd-f.akamaihd.net/i/cbcnews_1@8981/index_2500_av-p.m3u8
+CTV News,CA,Canada,https://pe-fa-lp02a.9c9media.com/live/News1Digi/p/hls/00000201/38ef78f479b07aa0/index/0c6a10a2/live/stream/h264/v1/3500000/manifest.m3u8
+Global News,CA,Canada,https://i.mjh.nz/PlutoTV/62cbef9ebb857100072fc187-alt.m3u8
+Global News BC,CA,Canada,https://i.mjh.nz/PlutoTV/62cbf063257170000724590c-alt.m3u8
+Global News Calgary,CA,Canada,https://i.mjh.nz/PlutoTV/62cbf23dcfb48300077f8348-alt.m3u8
+Global News Halifax,CA,Canada,https://i.mjh.nz/PlutoTV/62cbf398b8e02600071deda5-alt.m3u8
+Global News Kingston,CA,Canada,https://i.mjh.nz/PlutoTV/62cbf4964446e2000742073e-alt.m3u8
+Global News Montreal,CA,Canada,https://i.mjh.nz/PlutoTV/62cbfbd6ad95670007f567af-alt.m3u8
+Global News Peterborough,CA,Canada,https://i.mjh.nz/PlutoTV/62cbfcd8c2db990007861e43-alt.m3u8
+Global News Regina,CA,Canada,https://i.mjh.nz/PlutoTV/62cbff53ca8f2200080253b5-alt.m3u8
+Global News Saskatoon,CA,Canada,https://i.mjh.nz/PlutoTV/62cc00359cb58900088dc840-alt.m3u8
+Global News Winnipeg,CA,Canada,https://i.mjh.nz/PlutoTV/62cc0120880c890007191016-alt.m3u8
+CPAC (EN),CA,Canada,https://d7z3qjdsxbwoq.cloudfront.net/groupa/live/f9809cea-1e07-47cd-a94d-2ddd3e1351db/live.isml/.m3u8
+ICI RDI,CA,Canada,https://rcavlive.akamaized.net/hls/live/704025/xcanrdi/master.m3u8
+ICI Télé HD Ⓖ,CA,Canada,https://rcavlive.akamaized.net/hls/live/696615/xcancbft/master.m3u8
+TVA Ⓖ,CA,Canada,https://tvalive.akamaized.net/hls/live/2012413/tva01/master.m3u8
+Noovo,CA,Canada,https://pe-ak-lp04a-9c9media.akamaized.net/live/NOOVO/p/dash/00000001/f481c583dbd06b6c/manifest.mpd
+Télé Québec,CA,Canada,https://bcovlive-a.akamaihd.net/575d86160eb143458d51f7ab187a4e68/us-east-1/6101674910001/playlist.m3u8
+Savoir Média,CA,Canada,https://hls.savoir.media/live/stream.m3u8
+CPAC (FR),CA,Canada,https://bcsecurelivehls-i.akamaihd.net/hls/live/680604/1242843915001_3/master.m3u8
+ICI Montreal,CA,Canada,https://amdici.akamaized.net/hls/live/873426/ICI-Live-Stream/master.m3u8
+Toronto 360 TV,CA,Canada,http://cdn3.toronto360.tv:8081/toronto360/hd/playlist.m3u8
+BBC One Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_one_yorks/iptv_hd_abr_v1.m3u8
+BBC Two Ⓖ,GB,UK,https://vs-hls-push-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_two_hd/iptv_hd_abr_v1.m3u8
+Channel 4 Ⓢ,GB,UK,http://176.65.146.105:8011/play/a07w/index.m3u8
+S4C Ⓖ,GB,UK,https://live-uk.s4c-cdn.co.uk/out/v1/a0134f1fd5a2461b9422b574566d4442/live_uk.m3u8
+BBC Alba Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_alba/iptv_hd_abr_v1.m3u8
+BBC Four Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_four_hd/iptv_hd_abr_v1.m3u8
+BBC Scotland Ⓢ Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_scotland_hd/pc_hd_abr_v2.m3u8
+E4 Ⓢ,GB,UK,http://176.65.146.105:8011/play/E4HD/index.m3u8
+Film4 Ⓢ,GB,UK,http://176.65.146.105:8011/play/FILM4SD/index.m3u8
+QVC UK Ⓢ,GB,UK,https://qvcuk-live.akamaized.net/hls/live/2097112/qvc/3/3.m3u8
+TJC,GB,UK,https://cdn-shop-lc-01.akamaized.net/Content/HLS_HLS/Live/channel(TJCOTT)/index.m3u8
+BBC Three Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_three_hd/iptv_hd_abr_v1.m3u8
+GemsTV Ⓢ,GB,UK,http://57d6b85685bb8.streamlock.net:1935/abrgemporiaukgfx/livestream_360p/index.m3u8
+4seven Ⓢ,GB,UK,http://176.65.146.170:8013/play/a06p/index.m3u8
+Ideal World,GB,UK,https://ythls.armelin.one/channel/UCJbgGTpBWuC87VFIKTTO4RQ.m3u8
+Blaze Ⓖ,GB,UK,https://live.blaze.tv/live7/blaze/bitrate1.isml/live.m3u8
+Jewellery Maker,GB,UK,https://lo2-1.gemporia.com/abrjewellerymaker/smil:livestream.smil/playlist.m3u8
+Hobby Maker,GB,UK,https://lo2-1.gemporia.com/abrhobbymakerukgfx/smil:livestreamFullHD.smil/playlist.m3u8
+EarthXTV,GB,UK,https://ov.ottera.tv/live/master.m3u8?channel=earth_et
+PBS America,GB,UK,https://pbs-samsunguk.amagi.tv/playlist.m3u8
+Create & Craft,GB,UK,https://live-hochanda.simplestreamcdn.com/live2/hochanda/bitrate1.isml/live.m3u8
+CBBC Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbbc_hd/t=3840/v=pv14/b=5070016/main.m3u8
+CBeebies Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:cbeebies_hd/t=3840/v=pv14/b=5070016/main.m3u8
+BBC Parliament Ⓢ Ⓖ,GB,UK,https://vs-hls-pushb-uk-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_parliament/pc_hd_abr_v2.m3u8
+Sky News,GB,UK,https://linear021-gb-hls1-prd-ak.cdn.skycdp.com/Content/HLS_001_hd/Live/channel(skynews)/index_mob.m3u8
+GB News,GB,UK,https://live-gbnews.simplestreamcdn.com/live5/gbnews/bitrate1.isml/manifest.m3u8
+TalkTV,GB,UK,https://live-talktv-ssai.simplestreamcdn.com/v1/master/82267e84b9e5053b3fd0ade12cb1a146df74169a/talktv-live/index.m3u8
+Arise News,GB,UK,https://liveedge-arisenews.visioncdn.com/live-hls/arisenews/arisenews/arisenews_web/master.m3u8
+France 24,GB,UK,https://ythls.armelin.one/channel/UCQfwfsi5VrQ8yKZ-UWmAEFg.m3u8
+Bloomberg TV,GB,UK,https://bloomberg.com/media-manifest/streams/eu.m3u8
+NHK World Japan,GB,UK,https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index_4M.m3u8
+Arirang World,GB,UK,http://amdlive.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/chunklist_b2256000_sleng.m3u8
+TRT World,GB,UK,https://api.trtworld.com/livestream/v1/WcM3Oa2LHD9iUjWDSRUI335NkMWVTUV351H56dqC/master.m3u8
+SportyStuff TV,GB,UK,https://cdn.rtmp1.vodhosting.com/hls/SportyStuffTV.m3u8
+4Music Ⓖ,GB,UK,"https://csm-e-boxplus.tls1.yospace.com/csm/extlive/boxplus01,boxhits-alldev.m3u8?spotxc1=195996&spotxc2=190878&yo.up=https://boxtv.secure.footprint.net/boxhits/"
+The Box Ⓖ,GB,UK,"https://csm-e-boxplus.tls1.yospace.com/csm/extlive/boxplus01,thebox-alldev.m3u8?yo.up=https://boxtv.secure.footprint.net/thebox/"
+KISS Ⓖ,GB,UK,"https://csm-e-boxplus.tls1.yospace.com/csm/extlive/boxplus01,kiss-alldev.m3u8?spotxc1=195996&spotxc2=190878&yo.up=https://boxtv.secure.footprint.net/kiss/"
+Magic Ⓖ,GB,UK,"https://csm-e-boxplus.tls1.yospace.com/csm/extlive/boxplus01,magic-alldev.m3u8?yo.up=https%3A%2F%2Fboxtv.secure.footprint.net%2Fmagic%2F&spotxc1=195996&spotxc2=190878"
+Kerrang!,GB,UK,"https://csm-e-boxplus.tls1.yospace.com/csm/extlive/boxplus01,kerrang-alldev.m3u8?yo.up=http://boxtv-origin-elb.cds1.yospace.com/uploads/kerrang/"
+QVC Beauty Ⓢ,GB,UK,https://qvcuk-live.akamaized.net/hls/live/2097112/qby/3/3.m3u8
+QVC Extra Ⓢ,GB,UK,https://qvcuk-live.akamaized.net/hls/live/2097112/qex/3/3.m3u8
+QVC Style Ⓢ,GB,UK,https://qvcuk-live.akamaized.net/hls/live/2097112/qst/3/3.m3u8
+Now 70s,GB,UK,https://lightning-now70s-samsungnz.amagi.tv/playlist.m3u8
+Now 80s,GB,UK,https://lightning-now80s-samsunguk.amagi.tv/playlist.m3u8
+Now Rock,GB,UK,https://lightning-now90s-samsungnz.amagi.tv/playlist.m3u8
+BBC World News Ⓢ,GB,UK,http://ott-cdn.ucom.am/s24/index.m3u8
+BBC Radio 1,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d96000.norewind.m3u8
+BBC Radio 2,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d96000.norewind.m3u8
+BBC Radio 3,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d96000.norewind.m3u8
+BBC Radio 4,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d96000.norewind.m3u8
+BBC Radio 5 Live,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d96000.norewind.m3u8
+BBC Radio 6 Music,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d96000.norewind.m3u8
+BBC Radio 1Xtra,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d96000.norewind.m3u8
+BBC Radio 4 Extra,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio%3d96000.norewind.m3u8
+BBC Radio 5 Sports Extra,GB,UK,http://as-hls-uk-live.akamaized.net/pool_904/live/uk/bbc_radio_five_live_sports_extra/bbc_radio_five_live_sports_extra.isml/bbc_radio_five_live_sports_extra-audio%3d96000.norewind.m3u8
+BBC Asian Network,GB,UK,http://as-hls-ww-live.akamaized.net/pool_904/live/ww/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio%3d96000.norewind.m3u8
+BBC World Service,GB,UK,http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/ak/bbc_world_service.m3u8
+Buzzr Ⓖ,US,USA,https://buzzrota-ono.amagi.tv/playlist1080.m3u8
+Retro TV,US,USA,https://bcovlive-a.akamaihd.net/5e531be3ed6c41229b2af2d9bffba88d/us-east-1/6183977686001/profile_1/chunklist.m3u8
+Stadium,US,USA,https://bcovlive-a.akamaihd.net/e64d564b9275484f85981d8c146fb915/us-east-1/5994000126001/profile_1/976f34cf5a614518b7b539cbf9812080/chunklist_ssaiV.m3u8
+Biz TV,US,USA,https://thegateway.app/BizTV/BizTV-Tones/chunks.m3u8?nimblesessionid=94690008
+Heartland,US,USA,https://bcovlive-a.akamaihd.net/1ad942d15d9643bea6d199b729e79e48/us-east-1/6183977686001/profile_1/chunklist.m3u8
+Rev'n,US,USA,https://bcovlive-a.akamaihd.net/a71236fdda1747999843bd3d55bdd6fa/us-east-1/6183977686001/profile_1/chunklist.m3u8
+CNN,US,USA,https://tve-live-lln.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
+CNBC Ⓨ,US,USA,https://www.youtube.com/c/CNBC/live
+Bloomberg,US,USA,https://bloomberg.com/media-manifest/streams/us.m3u8
+ABC News,US,USA,https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8
+CBS News,US,USA,https://cbsnews.akamaized.net/hls/live/2020607/cbsnlineup_8/master.m3u8
+NBC News,US,USA,http://dai2.xumo.com/xumocdn/p=roku/amagi_hls_data_xumo1212A-xumo-nbcnewsnow/CDN/playlist.m3u8
+Reuters TV,US,USA,https://reuters-reutersnow-1-eu.rakuten.wurl.tv/playlist.m3u8
+NASA TV Public,US,USA,https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master_2000.m3u8
+NASA TV Media,US,USA,https://ntv2.akamaized.net/hls/live/2013923/NASA-NTV2-HLS/master.m3u8
+BBC Food,US,USA,https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5844bf5514d0007945bda/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
+BBC Home,US,USA,https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5fb5836fe745b600070fc743/master.m3u8?deviceId=channel&deviceModel=web&deviceVersion=1.0&appVersion=1.0&deviceType=rokuChannel&deviceMake=rokuChannel&deviceDNT=1&advertisingId=channel&embedPartner=rokuChannel&appName=rokuchannel&is_lat=1&bmodel=bm1&content=channel&platform=web&tags=ROKU_CONTENT_TAGS&coppa=false&content_type=livefeed&rdid=channel&genre=ROKU_ADS_CONTENT_GENRE&content_rating=ROKU_ADS_CONTENT_RATING&studio_id=viacom&channel_id=channel
+Docurama,US,USA,https://cinedigm.vo.llnwd.net/conssui/amagi_hls_data_xumo1234A-docuramaA/CDN/master.m3u8
+Drybar Comedy,US,USA,https://drybar-drybarcomedy-1-ca.samsung.wurl.com/manifest/playlist.m3u8
+Music Channel,US,USA,http://media.boni-records.com/index.m3u8

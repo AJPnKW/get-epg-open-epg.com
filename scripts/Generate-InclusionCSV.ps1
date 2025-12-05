@@ -19,40 +19,44 @@ if (Test-Path $excludeFile) {
     Write-Host "Exclusion file not found at $excludeFile"
 }
 
-# --- Collect channel data with progress ---
-$channelData = @()
+# --- Gather EPG files ---
 $epgFiles = Get-ChildItem $OutputDir -Filter "open-epg-*.xml" -ErrorAction SilentlyContinue
 $epgCount = $epgFiles.Count
-$index = 0
+Write-Host "Found $epgCount EPG files to process."
 
-foreach ($epg in $epgFiles) {
-    $index++
-    Write-Progress -Activity "Processing EPG files" `
-                   -Status ("File $index of " + $epgCount + ": " + $epg.Name) `
-                   -PercentComplete (($index / $epgCount) * 100)
-
+# --- Process files in parallel ---
+$channelData = $epgFiles | ForEach-Object -Parallel {
     try {
-        [xml]$doc = Get-Content $epg.FullName
+        # Load XML
+        [xml]$doc = Get-Content $_.FullName
+
+        # Build programme lookup table once
+        $progLookup = $doc.tv.programme | Group-Object channel -AsHashTable
+
+        $results = @()
         foreach ($chan in $doc.tv.channel) {
             $chanID   = $chan.id
-            # Correct way to access <display-name> element(s)
             $chanName = $chan.'display-name'[0]
-            # Pre-count programmes for this channel
-            $progCount = ($doc.tv.programme | Where-Object { $_.channel -eq $chanID }).Count
-            $isExcluded = ($chanID.Trim().ToLower() -in $excludedChannels)
 
-            $channelData += [pscustomobject]@{
-                File           = $epg.Name
+            # Fast lookup for programme count
+            $progCount = if ($progLookup.ContainsKey($chanID)) { $progLookup[$chanID].Count } else { 0 }
+
+            # Exclusion check
+            $isExcluded = ($chanID.Trim().ToLower() -in $using:excludedChannels)
+
+            $results += [pscustomobject]@{
+                File           = $_.Name
                 ChannelID      = $chanID
                 DisplayName    = $chanName
                 ProgrammeCount = $progCount
                 Excluded       = $isExcluded
             }
         }
+        $results
     } catch {
-        Write-Host "Error parsing $($epg.Name): $($_.Exception.Message)"
+        Write-Host "Error parsing $($_.Name): $($_.Exception.Message)"
     }
-}
+} -ThrottleLimit 4   # adjust threads based on CPU cores
 
 # --- Save to CSV ---
 $csvFile = Join-Path $ConfigDir "include_channels_wip.csv"
